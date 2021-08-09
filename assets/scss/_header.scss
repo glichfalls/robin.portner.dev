@@ -1,0 +1,39 @@
+
+
+header#main {
+  background-color: #010101;
+  border-bottom: 3px solid #efc20e;
+
+  > .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+  }
+
+  .custom-logo-link {
+    display: block;
+    height: 40px;
+
+    img {
+      height: 100%;
+      width: auto;
+    }
+  }
+
+}
+
+header#main .navigation {
+  display: flex;
+  flex-flow: row;
+  justify-content: flex-end;
+  align-items: center;
+
+  a {
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin: 1.75rem 5px;
+  }
+
+}
