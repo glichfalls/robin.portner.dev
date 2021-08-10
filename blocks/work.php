@@ -43,15 +43,15 @@ $figma = get_field('figma');
     -->
 
     <?php if($github !== null && $github !== ''): ?>
-        <a target="_blank" class="block-work--link" href="<?= $github ?>"><i class="fab fa-github"></i> GitHub</a>
+        <a rel="noreferrer noopener" target="_blank" class="block-work--link" href="<?= $github ?>"><i class="fab fa-github"></i> GitHub</a>
     <?php endif ?>
 
     <?php if($web !== null && $web !== ''): ?>
-        <a target="_blank" class="block-work--link" href="<?= $web ?>"><i class="fas fa-globe-europe"></i> Web</a>
+        <a rel="noreferrer noopener" target="_blank" class="block-work--link" href="<?= $web ?>"><i class="fas fa-globe-europe"></i> Web</a>
     <?php endif ?>
 
     <?php if($figma !== null && $figma !== ''): ?>
-        <a target="_blank" class="block-work--link" href="<?= $figma ?>"><i class="fab fa-figma"></i> Figma</a>
+        <a rel="noreferrer noopener" target="_blank" class="block-work--link" href="<?= $figma ?>"><i class="fab fa-figma"></i> Figma</a>
     <?php endif ?>
 
     <!--
