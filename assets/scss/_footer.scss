@@ -1,4 +1,11 @@
 
 footer#main {
+  display: flex;
+  align-items: center;
   height: 10vh;
+  padding: 40px 0 20px;
+  color: $color-primary;
+  font-size: 12px;
+  font-family: "Poppins", sans-serif;
+  font-weight: bold;
 }

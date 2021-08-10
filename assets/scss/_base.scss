@@ -17,9 +17,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h2 {
+  color: #ffffff;
   font-size: 36px;
-  border-bottom: 2px solid $color-primary;
   padding-top: 70px;
+
 }
 
 .container {
@@ -56,17 +57,34 @@ main {
   }
 }
 
+.wp-block-social-links .wp-social-link svg {
+  width: 2rem;
+  height: 2rem;
+}
+
+.wp-block-social-link:hover {
+  transform: none !important;
+}
+
+.wp-block-social-links {
+  justify-content: center;
+}
+
+.wp-block-social-links .wp-social-link.wp-social-link.wp-social-link {
+  color: $color-primary !important;
+  transition: color, .5s;
+  background-color: $color-tertiary !important;
+
+  &:hover {
+    color: $color-secondary !important;
+  }
+}
+
 @media screen and (max-width: 1024px) {
 
-
-  .wp-block-column {
+  #skill-items .wp-block-column {
     flex-basis: calc(50% - 20px) !important;
-    margin: 0 10px;
-  }
-
-  #welcome .wp-block-column,
-  #work-items .wp-block-column {
-    flex-basis: 100% !important;
+    margin: 0;
   }
 
   main {

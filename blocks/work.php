@@ -5,6 +5,7 @@ $description = get_field('description');
 $images = get_field('images');
 $tags = get_field('tags');
 $link = get_field('link');
+$delay = get_field('delay');
 
 
 $github = get_field('github');
@@ -13,7 +14,7 @@ $figma = get_field('figma');
 
 ?>
 
-<div class="block-work">
+<div class="block-work wow fadeInDown" data-wow-delay="<?= $delay ?>s">
 
     <h3 class="block-work--title"><?= $title ?></h3>
 
@@ -27,6 +28,8 @@ $figma = get_field('figma');
         <?php endforeach; ?>
     </div>
 
+    <!--
+
     <?php if(is_array($images)):?>
         <div class="block-work--gallery">
             <?php foreach($images as $i => $image): ?>
@@ -37,6 +40,8 @@ $figma = get_field('figma');
         </div>
     <?php endif ?>
 
+    -->
+
     <?php if($github !== null && $github !== ''): ?>
         <a target="_blank" class="block-work--link" href="<?= $github ?>"><i class="fab fa-github"></i> GitHub</a>
     <?php endif ?>
@@ -46,10 +51,20 @@ $figma = get_field('figma');
     <?php endif ?>
 
     <?php if($figma !== null && $figma !== ''): ?>
+        <a target="_blank" class="block-work--link" href="<?= $figma ?>"><i class="fab fa-figma"></i> Figma</a>
+    <?php endif ?>
+
+    <!--
+
+    <?php if($figma !== null && $figma !== ''): ?>
         <div class="figma" data-src="<?= $figma ?>">
             <i class="fas fa-sync-alt"></i>
             <h3>Load Design</h3>
         </div>
     <?php endif ?>
+
+    -->
+
+
 
 </div>

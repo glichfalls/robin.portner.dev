@@ -27,9 +27,8 @@
 
 .block-work {
   background-color: $color-tertiary;
-  border: 2px solid $color-primary;
   width: 100%;
-  padding: 20px;
+  padding: 20px 0;
   margin-bottom: 50px;
 
   iframe {
@@ -46,19 +45,20 @@
   &--tags {
     display: flex;
     flex-wrap: wrap;
-    margin: 0 0 30px 0;
+    margin: 5px 0;
 
     &:hover {
       cursor: default;
     }
 
     > div {
-      font-size: 12px;
-      padding: 5px 10px;
-      color: $color-tertiary;
+      font-size: 14px;
+      padding: 2px 5px;
+      color: $color-secondary;
       font-weight: bold;
       font-family: 'Poppins', sans-serif;
-      background-color: $color-primary;
+      background-color: $color-tertiary;
+      border: 1px solid $color-secondary;
       margin: 0 15px 15px 0;
     }
   }
@@ -71,16 +71,24 @@
 
     .img-zoom {
       cursor: pointer;
-      width: 50%;
+      width: calc(50% - 10px);
+      margin: 5px;
+
+      &::before {
+        content: '';
+      }
 
       > img {
+        border: 1px solid $color-primary;
         display: block;
         width: 100%;
-        object-fit: contain;
+        object-fit: cover;
         max-height: 400px;
       }
 
       &.open {
+        z-index: 1000;
+        margin: 0;
         background-color: $color-tertiary;
         display: flex;
         justify-content: center;
@@ -94,9 +102,11 @@
         overflow-y: scroll;
 
         > img {
+          border: none;
           object-fit: contain;
           width: 100%;
           height: 100%;
+          max-height: none;
         }
       }
     }
@@ -124,7 +134,7 @@
   }
 
   .figma {
-    border: 2px solid $color-primary;
+
     height: 400px;
     cursor: pointer;
     display: flex;
@@ -150,6 +160,8 @@
 }
 
 .block-portrait {
+  display: flex;
+  justify-content: center;
   position: relative;
   width: 100%;
   margin: 50px 0 10px;
@@ -157,23 +169,25 @@
   &::before {
     content: '';
     position: absolute;
-    left: 20%;
+    left: 50%;
     top: 10%;
     width: 40%;
-    height: 20%;
+    height: 30%;
     background-color: $color-primary;
+    border: 1px solid $color-tertiary;
     z-index: 5;
   }
 
   &::after {
     content: '';
     position: absolute;
-    left: 40%;
-    top: 50%;
-    width: 10%;
+    left: 50%;
+    top: 30%;
+    width: 35%;
     height: 40%;
     background-color: $color-secondary;
-    z-index: 7;
+    border: 1px solid $color-tertiary;
+    z-index: 5;
   }
 
   img {
@@ -190,6 +204,10 @@
 @media screen and (max-width: 1024px) {
 
   .skill {
+
+    span {
+      font-size: 16px;
+    }
     img {
       width: 30px;
       height: 30px;
@@ -197,6 +215,8 @@
   }
 
   .block-work {
+    margin-bottom: 25px;
+
     &--gallery {
       .img-zoom > img {
         height: auto;
@@ -206,7 +226,7 @@
 
   #welcome {
     h3 {
-      margin: 15px;
+      margin: 15px 0;
     }
   }
 

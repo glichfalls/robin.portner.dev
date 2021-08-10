@@ -1,5 +1,7 @@
 (function ($) {
 
+    new WOW().init();
+
     $('.img-zoom').on('click', function () {
         $(this).toggleClass('open');
     })
