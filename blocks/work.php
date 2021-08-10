@@ -6,7 +6,7 @@ $images = get_field('images');
 $tags = get_field('tags');
 $link = get_field('link');
 $delay = get_field('delay');
-
+$animation = get_field('animation');
 
 $github = get_field('github');
 $web = get_field('link');
@@ -14,7 +14,7 @@ $figma = get_field('figma');
 
 ?>
 
-<div class="block-work wow fadeInDown" data-wow-delay="<?= $delay ?>s">
+<div class="block-work wow <?= $animation ?>" data-wow-delay="<?= $delay ?>s">
 
     <h3 class="block-work--title"><?= $title ?></h3>
 
