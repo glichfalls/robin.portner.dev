@@ -144,6 +144,44 @@
 
 }
 
+.block-portrait {
+  position: relative;
+  width: 100%;
+  margin: 50px 0 10px;
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: 20%;
+    top: 10%;
+    width: 40%;
+    height: 20%;
+    background-color: $color-primary;
+    z-index: 5;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    left: 40%;
+    top: 50%;
+    width: 10%;
+    height: 25%;
+    background-color: $color-secondary;
+    z-index: 7;
+  }
+
+  img {
+    filter: grayscale(100%);
+    position: relative;
+    z-index: 6;
+    width: 250px;
+    height: auto;
+    border-radius: 50%;
+    border: 2px solid $color-secondary;
+  }
+}
+
 @media screen and (max-width: 1024px) {
 
   .skill {
@@ -158,6 +196,19 @@
       .img-zoom > img {
         height: auto;
       }
+    }
+  }
+
+  #welcome {
+    h3 {
+      margin: 15px;
+    }
+  }
+
+  .block-portrait {
+    &::before,
+    &::after {
+      display: none;
     }
   }
 

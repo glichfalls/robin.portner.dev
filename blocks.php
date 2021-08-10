@@ -22,5 +22,14 @@ add_action('acf/init', function () {
             'mode' => 'edit',
         ]);
 
+        acf_register_block_type([
+            'name' => 'portrait',
+            'title' => 'Portrait',
+            'description' => 'Portrait',
+            'render_template' => '/blocks/portrait.php',
+            'category' => 'common',
+            'mode' => 'edit',
+        ]);
+
     }
 });
