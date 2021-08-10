@@ -4,7 +4,7 @@
 }
 
 html, body {
-  background-color: #171717;
+  background-color: $color-tertiary;
   color: #ffffff;
   font-family: 'Open-Sans', sans-serif;
   padding: 0;
@@ -18,8 +18,8 @@ h1, h2, h3, h4, h5, h6 {
 
 h2 {
   font-size: 36px;
-  border-bottom: 2px solid #efc20e;
-  margin-top: 50px;
+  border-bottom: 2px solid $color-primary;
+  padding-top: 70px;
 }
 
 .container {
@@ -31,12 +31,12 @@ h2 {
 
 a {
   display: inline-block;
-  color: #efc20e;
+  color: $color-primary;
   text-decoration: none;
   transition: color, .5s;
 
   &:hover {
-    color: #ffffff;
+    color: $color-secondary;
   }
 }
 

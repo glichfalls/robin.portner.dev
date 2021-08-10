@@ -2,8 +2,8 @@
 
 header#main {
   z-index: 100;
-  background-color: #010101;
-  border-bottom: 3px solid #efc20e;
+  background-color: $color-tertiary;
+  border-bottom: 3px solid $color-secondary;
 
   > .container {
     display: flex;
@@ -35,6 +35,7 @@ header#main .navigation {
   align-items: center;
 
   a {
+    font-size: 22px;
     font-family: 'Poppins', sans-serif;
     font-weight: bold;
     text-transform: uppercase;
@@ -60,7 +61,7 @@ header#main .navigation {
     }
 
     .navigation {
-      background-color: $color-secondary;
+      background-color: $color-tertiary;
       display: flex;
       flex-flow: column;
       align-items: center;

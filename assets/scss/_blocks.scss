@@ -26,8 +26,8 @@
 }
 
 .block-work {
-  background-color: #010101;
-  border: 2px solid #efc20e;
+  background-color: $color-tertiary;
+  border: 2px solid $color-primary;
   width: 100%;
   padding: 20px;
   margin-bottom: 50px;
@@ -48,12 +48,17 @@
     flex-wrap: wrap;
     margin: 0 0 30px 0;
 
+    &:hover {
+      cursor: default;
+    }
+
     > div {
+      font-size: 12px;
       padding: 5px 10px;
-      color: #010101;
+      color: $color-tertiary;
       font-weight: bold;
       font-family: 'Poppins', sans-serif;
-      background-color: #efc20e;
+      background-color: $color-primary;
       margin: 0 15px 15px 0;
     }
   }
@@ -76,7 +81,7 @@
       }
 
       &.open {
-        background-color: #010101;
+        background-color: $color-tertiary;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -102,15 +107,15 @@
     font-family: 'Poppins', sans-serif;
     letter-spacing: 1px;
     font-weight: bold;
-    border: 1px solid #efc20e;
-    color: #efc20e;
+    border: 1px solid $color-primary;
+    color: $color-primary;
     padding: 5px 15px;
     margin: 0 15px 0 0;
 
     &:hover {
-      border: 1px solid #010101;
-      color: #010101;
-      background-color: #efc20e;
+      border: 1px solid $color-tertiary;
+      color: $color-tertiary;
+      background-color: $color-primary;
     }
   }
 
@@ -166,7 +171,7 @@
     left: 40%;
     top: 50%;
     width: 10%;
-    height: 25%;
+    height: 40%;
     background-color: $color-secondary;
     z-index: 7;
   }
