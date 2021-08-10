@@ -46,13 +46,9 @@ $figma = get_field('figma');
     <?php endif ?>
 
     <?php if($figma !== null && $figma !== ''): ?>
-        <div class="figma">
-            <iframe
-                class="figma"
-                src=""
-                data-src="<?= $figma ?>"
-                allowfullscreen>
-            </iframe>
+        <div class="figma" data-src="<?= $figma ?>">
+            <i class="fas fa-sync-alt"></i>
+            <h3>Load Design</h3>
         </div>
     <?php endif ?>
 
