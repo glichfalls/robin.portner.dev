@@ -28,20 +28,6 @@ $figma = get_field('figma');
         <?php endforeach; ?>
     </div>
 
-    <!--
-
-    <?php if(is_array($images)):?>
-        <div class="block-work--gallery">
-            <?php foreach($images as $i => $image): ?>
-                <div class="img-zoom">
-                    <img src="<?= $image['url'] ?>" alt="<?= $title ?> impression <?= $i + 1 ?>" />
-                </div>
-            <?php endforeach; ?>
-        </div>
-    <?php endif ?>
-
-    -->
-
     <?php if($github !== null && $github !== ''): ?>
         <a rel="noreferrer noopener" target="_blank" class="block-work--link" href="<?= $github ?>"><i class="fab fa-github"></i> GitHub</a>
     <?php endif ?>
@@ -53,18 +39,5 @@ $figma = get_field('figma');
     <?php if($figma !== null && $figma !== ''): ?>
         <a rel="noreferrer noopener" target="_blank" class="block-work--link" href="<?= $figma ?>"><i class="fab fa-figma"></i> Figma</a>
     <?php endif ?>
-
-    <!--
-
-    <?php if($figma !== null && $figma !== ''): ?>
-        <div class="figma" data-src="<?= $figma ?>">
-            <i class="fas fa-sync-alt"></i>
-            <h3>Load Design</h3>
-        </div>
-    <?php endif ?>
-
-    -->
-
-
 
 </div>
