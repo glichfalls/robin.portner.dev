@@ -1,5 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@700&display=swap');
 
+$color-primary: #efc20e;
+$color-secondary: #010101;
+$color-tertiary: #171717;
+
+$hamburger-layer-color: $color-primary;
+$hamburger-layer-border-radius: 0;
+$hamburger-hover-opacity: 1;
+
+@import "../../node_modules/hamburgers/_sass/hamburgers/hamburgers";
 
 @import "base";
 @import "header";

@@ -31,7 +31,7 @@ $figma = get_field('figma');
         <div class="block-work--gallery">
             <?php foreach($images as $i => $image): ?>
                 <div class="img-zoom">
-                    <img src="<?= $image['url'] ?>" alt="<?= $description ?> <?= $i ?>" />
+                    <img src="<?= $image['url'] ?>" alt="<?= $title ?> impression <?= $i + 1 ?>" />
                 </div>
             <?php endforeach; ?>
         </div>
@@ -48,8 +48,8 @@ $figma = get_field('figma');
     <?php if($figma !== null && $figma !== ''): ?>
         <div class="figma">
             <iframe
-                src=""
                 class="figma"
+                src=""
                 data-src="<?= $figma ?>"
                 allowfullscreen>
             </iframe>

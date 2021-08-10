@@ -6,5 +6,6 @@ $icon = get_field('icon');
 ?>
 
 <div class="skill">
-    <i class="<?= $icon ?>"></i> <?= $skill ?>
+    <img src="https://unpkg.com/simple-icons@v5/icons/<?= $icon ?>.svg" alt="<?= $skill ?> icon" />
+    <span><?= $skill ?></span>
 </div>

@@ -40,11 +40,35 @@ a {
   }
 }
 
+main {
+  font-size: 18px;
+}
+
+.wp-block-table {
+  td {
+    vertical-align: top;
+    padding: 10px 0;
+    line-height: 1.5;
+  }
+  td:first-child {
+    font-family: "Poppins", sans-serif;
+    width: 120px;
+  }
+}
+
 @media screen and (max-width: 1024px) {
 
+  .wp-block-column {
+    flex-basis: calc(50% - 20px) !important;
+    margin: 0 10px;
+  }
+
+  #work-items .wp-block-column {
+    flex-basis: 100% !important;
+  }
 
   main {
-    padding: 0 15px;
+    padding: 60px 15px 0;
   }
 
 }

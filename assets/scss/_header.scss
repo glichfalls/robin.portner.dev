@@ -1,6 +1,7 @@
 
 
 header#main {
+  z-index: 100;
   background-color: #010101;
   border-bottom: 3px solid #efc20e;
 
@@ -9,6 +10,10 @@ header#main {
     justify-content: space-between;
     align-items: center;
 
+  }
+
+  .menu-toggle {
+    display: none;
   }
 
   .custom-logo-link {
@@ -34,6 +39,58 @@ header#main .navigation {
     font-weight: bold;
     text-transform: uppercase;
     margin: 1.75rem 5px;
+  }
+
+}
+
+@media screen and (max-width: 1024px) {
+
+  header#main {
+    display: flex;
+    align-items: center;
+    width: 100vw;
+    height: 60px;
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    .custom-logo-link {
+      z-index: 11;
+      position: relative;
+    }
+
+    .navigation {
+      background-color: $color-secondary;
+      display: flex;
+      flex-flow: column;
+      align-items: center;
+      justify-content: center;
+      position: fixed;
+      width: 100vw;
+      height: 0;
+      z-index: 10;
+      top: 60px;
+      left: 0;
+      transition: height, .25s;
+      overflow: hidden;
+
+      a {
+        font-size: 36px;
+      }
+
+      &.is-active {
+        height: calc(100vh - 60px);
+      }
+    }
+    .menu-toggle {
+      display: block;
+      position: relative;
+      z-index: 11;
+
+      .hamburger-box {
+        display: block;
+      }
+    }
   }
 
 }
