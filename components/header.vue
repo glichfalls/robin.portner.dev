@@ -1,5 +1,32 @@
+<template>
+  <header id="main">
+    <div class="container">
 
+      <div class="logo">
 
+      </div>
+
+      <div class="menu-toggle">
+        <button class="hamburger hamburger--emphatic" type="button">
+                <span class="hamburger-box">
+                    <span class="hamburger-inner"></span>
+                </span>
+        </button>
+      </div>
+
+      <div class="navigation">
+        <a href="/#skills">Skills</a>
+        <a href="/#work">Work</a>
+        <a href="/#projects">Side Projects</a>
+        <a href="/#experience">Experience</a>
+        <a href="/#education">Education</a>
+      </div>
+
+    </div>
+  </header>
+</template>
+
+<style scoped lang="scss">
 header#main {
   z-index: 100;
   padding: 30px 0;
@@ -121,3 +148,4 @@ header#main .navigation {
   }
 
 }
+</style>
